@@ -1,0 +1,7 @@
+package test
+
+class Test
+
+class Another {
+    const val name: String = Jack
+}

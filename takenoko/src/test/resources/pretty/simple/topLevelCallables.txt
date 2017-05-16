@@ -1,0 +1,8 @@
+package test
+
+public inline fun <R> run(block: () -> R) = block()
+
+internal val <T : CharSequence> T.length2: Int
+    get() = this.length
+
+internal val test: String = "Hello, world!"

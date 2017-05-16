@@ -1,0 +1,19 @@
+buildscript {
+    ext.kotlin_version = "1.1.2-2"
+
+    repositories {
+        mavenCentral()
+    }
+    dependencies {
+        classpath "org.jetbrains.kotlin:kotlin-gradle-plugin:$kotlin_version"
+    }
+}
+
+allprojects {
+    group 'org.yanex.takenoko'
+    version '0.1-SNAPSHOT'
+
+    repositories {
+        mavenCentral()
+    }
+}

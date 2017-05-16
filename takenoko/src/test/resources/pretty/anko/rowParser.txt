@@ -1,0 +1,64 @@
+fun <T1, R> rowParser(parser: (T1) -> R): RowParser<R> {
+    return object: RowParser<R> {
+        override fun parseRow(columns: Array<Any?>): R {
+            if (columns.size != 1) {
+                throw SQLiteException("Invalid row: 1 column required")
+            }
+    
+            @Suppress("UNCHECKED_CAST")
+            return parser(columns[0] as T1)
+        }
+    }
+}
+
+fun <T1, T2, R> rowParser(parser: (T1, T2) -> R): RowParser<R> {
+    return object: RowParser<R> {
+        override fun parseRow(columns: Array<Any?>): R {
+            if (columns.size != 2) {
+                throw SQLiteException("Invalid row: 2 columns required")
+            }
+    
+            @Suppress("UNCHECKED_CAST")
+            return parser(columns[0] as T1, columns[1] as T2)
+        }
+    }
+}
+
+fun <T1, T2, T3, R> rowParser(parser: (T1, T2, T3) -> R): RowParser<R> {
+    return object: RowParser<R> {
+        override fun parseRow(columns: Array<Any?>): R {
+            if (columns.size != 3) {
+                throw SQLiteException("Invalid row: 3 columns required")
+            }
+    
+            @Suppress("UNCHECKED_CAST")
+            return parser(columns[0] as T1, columns[1] as T2, columns[2] as T3)
+        }
+    }
+}
+
+fun <T1, T2, T3, T4, R> rowParser(parser: (T1, T2, T3, T4) -> R): RowParser<R> {
+    return object: RowParser<R> {
+        override fun parseRow(columns: Array<Any?>): R {
+            if (columns.size != 4) {
+                throw SQLiteException("Invalid row: 4 columns required")
+            }
+    
+            @Suppress("UNCHECKED_CAST")
+            return parser(columns[0] as T1, columns[1] as T2, columns[2] as T3, columns[3] as T4)
+        }
+    }
+}
+
+fun <T1, T2, T3, T4, T5, R> rowParser(parser: (T1, T2, T3, T4, T5) -> R): RowParser<R> {
+    return object: RowParser<R> {
+        override fun parseRow(columns: Array<Any?>): R {
+            if (columns.size != 5) {
+                throw SQLiteException("Invalid row: 5 columns required")
+            }
+    
+            @Suppress("UNCHECKED_CAST")
+            return parser(columns[0] as T1, columns[1] as T2, columns[2] as T3, columns[3] as T4, columns[4] as T5)
+        }
+    }
+}

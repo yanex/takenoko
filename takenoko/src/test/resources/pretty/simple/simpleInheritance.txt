@@ -1,0 +1,9 @@
+package test
+
+open class A(a: String)
+
+interface IA
+
+interface IB
+
+class B<out A, in B> : A("John"), IA, IB

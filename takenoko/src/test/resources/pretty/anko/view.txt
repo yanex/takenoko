@@ -1,0 +1,16 @@
+package test
+
+import android.view.ViewManager
+import android.support.v7.view.menu.ActionMenuItemView
+import android.content.Context
+
+@PublishedApi
+internal object `$$Anko$Factories$AppcompatV7View` {
+    val ACTION_MENU_ITEM_VIEW = { ctx: Context -> ActionMenuItemView(ctx)
+}
+
+inline fun ViewManager.actionMenuItemView(): ActionMenuItemView = actionMenuItemView {}
+
+inline fun ViewManager.actionMenuItemView(init: ActionMenuItemView.() -> Unit): ActionMenuItemView {
+    return ankoView(`$$Anko$Factories$AppcompatV7View`.ACTION_MENU_ITEM_VIEW, theme = 0) { init() }
+}

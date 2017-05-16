@@ -1,0 +1,7 @@
+package test
+
+class Test<T : String>(s: String) {
+    constructor(a: Int) : this(a.toString())
+
+    constructor() : this("SomeString")
+}

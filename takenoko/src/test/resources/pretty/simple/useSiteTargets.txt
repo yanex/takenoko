@@ -1,0 +1,10 @@
+package test
+
+class Test(@property:Prop @param:Param @field:Field a: String = "Nick") {
+    @get:Getter
+    @set:Setter
+    @setparam:SetParam
+    @property:Property
+    @field:Field
+    val b: String = "John"
+}

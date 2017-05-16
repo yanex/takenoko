@@ -1,0 +1,10 @@
+package test
+
+import android.app.ActivityManager
+import android.content.Context
+
+/**
+ * Returns the ActivityManager instance.
+ */
+val Context.activityManager: ActivityManager
+    get() = getSystemService(Context.ACTIVITY_SERVICE) as ActivityManager

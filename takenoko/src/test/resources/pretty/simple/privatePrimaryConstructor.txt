@@ -1,0 +1,5 @@
+package test
+
+class Test private constructor()
+
+class Annotations @Anno @Anno(true) constructor()

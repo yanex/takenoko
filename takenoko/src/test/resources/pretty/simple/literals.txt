@@ -1,0 +1,11 @@
+package test
+
+fun test() {
+    "Simple"
+    "With"Quotes"
+    '9'
+    '\n'
+    '\t'
+    '\r'
+    
+}

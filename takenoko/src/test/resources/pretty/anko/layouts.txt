@@ -1,0 +1,16 @@
+package test
+
+import android.content.Context
+import android.widget.ScrollView
+import android.view.View
+import android.util.AttributeSet
+import android.widget.FrameLayout.LayoutParams
+
+open class _ScrollView(ctx: Context) : ScrollView(ctx) {
+    inline fun <T : View> T.lparams(c: Context?, attrs: AttributeSet?, init: FrameLayout.LayoutParams.() -> Unit): T {
+        val layoutParams = FrameLayout.LayoutParams(c!!, attrs!!)
+        layoutParams.init()
+        this@lparams.layoutParams = layoutParams
+        return this
+    }
+}

@@ -1,0 +1,12 @@
+package test
+
+import kotlin.coroutines.experimental.CoroutineContext
+import android.view.View
+
+fun onLayoutChange(context: CoroutineContext, suspend handler: CoroutineContext.(v: View?, left: Int, top: Int, right: Int, bottom: Int) -> Unit) {
+    addOnLayoutChangeListener { v, left, top, right, bottom, oldLeft, oldTop, oldRight, oldBottom ->
+        launch(context) {
+            handler(v, left, top, right, bottom, oldLeft, oldTop, oldRight, oldBottom)
+        }
+    }
+}

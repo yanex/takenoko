@@ -1,0 +1,7 @@
+package test
+
+import android.widget.TimePicker
+
+inline fun TimePicker.onTimeChanged(noinline l: (view: TimePicker?, hourOfDay: Int, minute: Int) -> Unit) {
+    setOnTimeChangedListener(l)
+}

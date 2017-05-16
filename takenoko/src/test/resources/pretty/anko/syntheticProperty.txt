@@ -1,0 +1,7 @@
+package test
+
+import test.AnkoInternals
+
+var titleResource: Int
+    @Deprecated(AnkoInternals.NO_GETTER, level = DeprecationError.ERROR) get() = AnkoInternals.noGetter()
+    set(v) = setTitle(v)

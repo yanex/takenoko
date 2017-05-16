@@ -1,0 +1,20 @@
+package test
+
+/**
+ * KDoc for test class.
+ */
+// Comment
+class Test {
+    /**
+     * KDoc for
+     * test function.
+     */
+    fun test()
+
+    /*
+    Multi
+    line
+    comment
+    */
+    val prop: String = ""
+}
