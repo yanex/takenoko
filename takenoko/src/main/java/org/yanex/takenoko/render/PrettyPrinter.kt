@@ -88,6 +88,7 @@ class PrettyPrinter(val configuration: PrettyPrinterConfiguration) : KoElementVi
         e.modifiers.render(this)
 
         if (e.parent is KoFunction) {
+            if (e.modifiers[VARARG]) append("vararg ")
             if (e.modifiers[VAR]) append("var ")
             else if (e.modifiers[VAL]) append("val ")
         } else {

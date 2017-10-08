@@ -160,4 +160,13 @@ class PrettyPrintSimple : AbstractPrettyPrintOutputTest() {
             }
         }
     }
+
+    @Test fun vararg() = testFile {
+        function("printLines") {
+            param<String>("args", VARARG)
+            body("""
+                args.forEach { println(it) }
+            """.trimIndent())
+        }
+    }
 }

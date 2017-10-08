@@ -1,0 +1,5 @@
+package test
+
+fun printLines(vararg args: String) {
+    args.forEach { println(it) }
+}
